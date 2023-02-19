@@ -1,5 +1,4 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 PRODUCT_COPY_FILES += device/samsung/m51/prebuilt/kernel:kernel
 
