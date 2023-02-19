@@ -1,5 +1,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+# Inherit from m51 device
+$(call inherit-product, device/samsung/m51/device.mk)
 PRODUCT_COPY_FILES += device/samsung/m51/prebuilt/kernel:kernel
 
 # Device identifier. This must come after all inclusions
